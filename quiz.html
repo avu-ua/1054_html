@@ -7,18 +7,37 @@
 </head>
 <body>
     <h1>Test Quiz</h1>
-    <div id="question1">
-        <form action="#">
-            <h5>Whom resembles Yoda</h5>
-            <input type="radio" id="programmer" name="prototype" value="A programmer George Lucas knew">
-            <label for="programmer">HTML</label><br>
-            <input type="radio" id="einstein" name="prototype" value="Albert Einstein">
-            <label for="einstein">CSS</label><br>
-            <input type="radio" id="son" name="prototype" value="George Lucas's eldest son">
-            <label for="son">JavaScript</label>
+    <div id="question1" action="index.html">
+        <form onsubmit="submit_q1()">
+            <img src="img/e-yoda.png" alt="Yoda" style="width: 150px; height: 150px;">
+            <h3>Whom resembles Yoda?</h3>
+            <img src="img/programmer.png" alt="programmer" style="width: 100px; height: 100px;">
+            <input type="radio" id="programmer" name="prototype" value="programmer">
+            <label for="programmer">A programmer George Lucas knew</label>
+            <br>
+            <img src="img/einstein.png" alt="Einstein" style="width: 100px; height: 100px;">
+            <input type="radio" id="einstein" name="prototype" value="einstein">
+            <label for="einstein">Albert Einstein</label>
+            <br>
+            <img src="img/cat.png" alt="cat" style="width: 100px; height: 100px;">
+            <input type="radio" id="cat" name="prototype" value="cat">
+            <label for="cat">George Lucas's cat</label>
             <br><br>
             <input type="submit" value="Submit">
           </form>
     </div>
+    <div id="test_div">
+        <p id="test_p">111</p>
+    </div>
+    <script>
+        function submit_q1(e) {
+            // e.preventDefault();
+            console.log(e);
+            console.log("111");
+            var x = document.getElementById("test_p");
+            x.innerHTML = "222";
+            e.preventDefault();
+        }
+    </script>
 </body>
 </html>
