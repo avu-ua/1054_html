@@ -6,10 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>May the Force be with You!</title>
         <link rel="shortcut icon" href="img/baby-yoda1.png" type="image/x-icon">
-    </head>
-    <body>
-        <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
         <style>
+            body {
+                max-width: 80%;
+                margin: auto;
+                font-family: monospace, sans-serif;
+            }
+            .menue_left_align {
+                float: left;
+                width: 27%;
+            }
             #baby_yoda {
                 width: 200px;
                 height: 200px;
@@ -18,10 +24,13 @@
                 border-radius: 25%;
             }
         </style>
+    </head>
+    <body>
+        <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
         <nav>
             <ul>
-              <li><a href="index.html">Main</a></li>
-              <li><a href="quiz.html">Quiz</a></li>
+              <li class="menue_left_align"><a href="index.html">Main</a></li>
+              <li class="menue_left_align"><a href="quiz.html">Quiz</a></li>
               <li><a href="creds.html">Credentials</a></li>
             </ul>
           </nav>

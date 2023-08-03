@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz about Yoda</title>
+    <style>
+        body {
+            max-width: 80%;
+            margin: auto;
+            font-family: monospace, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>Test Quiz</h1>
@@ -80,15 +87,39 @@
     </div>
     <br>
     <div id="test_div">
-        <p id="test_p">111</p>
+        <p id="test_q1">111</p>
+        <p id="test_q2">222</p>
+        <p id="test_q3">333</p>
+        <p id="test_q4">444</p>
     </div>
     <script>
         function submit_q1(e) {
             e.preventDefault();
-            var x = document.getElementById("test_p");
             var q1_data = new FormData(document.getElementById("q1_form"));
-            var q1_response = q1_data.get("prototype")
-            x.innerHTML = q1_response;
+            var q1_response = q1_data.get("prototype");
+            var x1 = document.getElementById("test_q1");
+            x1.innerHTML = q1_response;
+        }
+        function submit_q2(e) {
+            e.preventDefault();
+            var q2_data = new FormData(document.getElementById("q2_form"));
+            var q2_response = q2_data.getAll("error-knower");
+            var x2 = document.getElementById("test_q2");
+            x2.innerHTML = q2_response;
+        }
+        function submit_q3(e) {
+            e.preventDefault();
+            var q3_data = new FormData(document.getElementById("q3_form"));
+            var q3_response = q3_data.get("language");
+            var x3 = document.getElementById("test_q3");
+            x3.innerHTML = q3_response;
+        }
+        function submit_q4(e) {
+            e.preventDefault();
+            var q4_data = new FormData(document.getElementById("q4_form"));
+            var q4_response = q4_data.get("conditions");
+            var x4 = document.getElementById("test_q4");
+            x4.innerHTML = q4_response;
         }
     </script>
 </body>
