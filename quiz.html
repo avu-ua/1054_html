@@ -7,36 +7,88 @@
 </head>
 <body>
     <h1>Test Quiz</h1>
-    <div id="question1" action="index.html">
-        <form onsubmit="submit_q1()">
+    <div id="question1">
+        <form id="q1_form" onsubmit="submit_q1(event)">
             <img src="img/e-yoda.png" alt="Yoda" style="width: 150px; height: 150px;">
             <h3>Whom resembles Yoda?</h3>
             <img src="img/programmer.png" alt="programmer" style="width: 100px; height: 100px;">
-            <input type="radio" id="programmer" name="prototype" value="programmer">
-            <label for="programmer">A programmer George Lucas knew</label>
+            <input type="radio" id="programmer1" name="prototype" value="programmer">
+            <label for="programmer1">A programmer George Lucas knew</label>
             <br>
             <img src="img/einstein.png" alt="Einstein" style="width: 100px; height: 100px;">
-            <input type="radio" id="einstein" name="prototype" value="einstein">
-            <label for="einstein">Albert Einstein</label>
+            <input type="radio" id="einstein1" name="prototype" value="einstein">
+            <label for="einstein1">Albert Einstein</label>
             <br>
             <img src="img/cat.png" alt="cat" style="width: 100px; height: 100px;">
-            <input type="radio" id="cat" name="prototype" value="cat">
-            <label for="cat">George Lucas's cat</label>
+            <input type="radio" id="cat1" name="prototype" value="cat">
+            <label for="cat1">George Lucas's cat</label>
             <br><br>
             <input type="submit" value="Submit">
           </form>
     </div>
+    <br>
+    <div id="question2">
+        <form id="q2_form" onsubmit="submit_q2(event)">
+            <img src="img/cat-prog.jpg" alt="Cat-programmer" style="width: 150px; height: 150px;">
+            <h3>Who knows well errors 404, 403, 500 etc.?</h3>
+            <img src="img/programmer.png" alt="programmer" style="width: 100px; height: 100px;">
+            <input type="checkbox" id="programmer2" name="error-knower" value="programmer">
+            <label for="programmer2">A programmer George Lucas knew</label>
+            <br>
+            <img src="img/einstein.png" alt="Einstein" style="width: 100px; height: 100px;">
+            <input type="checkbox" id="einstein2" name="error-knower" value="einstein">
+            <label for="einstein2">Albert Einstein</label>
+            <br>
+            <img src="img/cat.png" alt="cat" style="width: 100px; height: 100px;">
+            <input type="checkbox" id="cat2" name="error-knower" value="cat">
+            <label for="cat2">George Lucas's cat</label>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </div>
+    <br>
+    <div>
+        <form id="q3_form" onsubmit="submit_q3(event)">
+            <h3>What the language Yoda spoke sounded like?</h3>
+            <input type="radio" id="chinese" name="language" value="chinese">
+            <label for="chinese">Mandarin spoken by Italian man</label>
+            <br>
+            <input type="radio" id="javascript" name="language" value="javascript">
+            <label for="javascript">JavaScript spoken by a Chinese man</label>
+            <br>
+            <input type="radio" id="sardinian" name="language" value="sardinian">
+            <label for="sardinian">Sardinian accent of Italian</label>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </div>
+    <br>
+    <div>
+        <form id="q4_form" onsubmit="submit_q4(event)">
+            <h3>What does expression "Yoda conditions" mean?</h3>
+            <input type="radio" id="longlife" name="conditions" value="longlife">
+            <label for="longlife">Special lifestyle conditions<br>(allowing a person to live a very long life)</label>
+            <br>
+            <input type="radio" id="wisdom" name="conditions" value="wisdom">
+            <label for="wisdom">Special learning conditions<br>(allowing a person to learn a lot and acquire a wisdom)</label>
+            <br>
+            <input type="radio" id="it" name="conditions" value="it">
+            <label for="it">Special programming style<br>(where the two parts of an expression are reversed from the typical order in a conditional statement)</label>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </div>
+    <br>
     <div id="test_div">
         <p id="test_p">111</p>
     </div>
     <script>
         function submit_q1(e) {
-            // e.preventDefault();
-            console.log(e);
-            console.log("111");
-            var x = document.getElementById("test_p");
-            x.innerHTML = "222";
             e.preventDefault();
+            var x = document.getElementById("test_p");
+            var q1_data = new FormData(document.getElementById("q1_form"));
+            var q1_response = q1_data.get("prototype")
+            x.innerHTML = q1_response;
         }
     </script>
 </body>
