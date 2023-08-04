@@ -40,8 +40,11 @@ figcaption {
     width: 200px;
     height: 200px;
     padding: 30px;
-    background-color: red;
+    /*background-color: red;*/
     border-radius: 25%;
+}
+#baby_yoda:hover {
+    background-color: red;
 }
 #take_quiz {
     padding: 5px;
