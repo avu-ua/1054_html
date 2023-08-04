@@ -1,0 +1,81 @@
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: monospace, sans-serif;
+    background-image: url("img/b_yoda_bckgrd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+nav {
+    padding: 10px 0 10px 0;
+    font-size: large;
+    font-weight: 900;
+    background-color: gray;
+    position: fixed;
+    top:0%;
+    margin: auto;
+    width: 80%;
+}
+nav div{
+    text-align: center;
+    display:inline;
+    width: 50em;
+    margin: auto;
+    padding: 10px 30px 10px 30px;
+}
+header {
+    margin-top: 50px;
+}
+.options_section {
+    display: flex;
+}
+.option {
+    width: 27%;
+}
+.question img {
+    border-radius: 10%;
+    border: 3px solid white;
+    width: 150px;
+    height: 150px;
+}
+.question h1 {
+    font-weight: 900;
+    font-size: 40px;
+}
+.option img {
+    border-radius: 10%;
+    border: 3px solid white;
+    width: 100px;
+    height: 100px;
+}
+#submit_btn, #btn_to_next_q {
+    padding: 5px;
+    width: 200px;
+    font-size: 20px;
+    color: green;
+    background: lightseagreen;
+    cursor: pointer;
+}
+#quiz_end {
+    display: none;
+}
+#quiz_end p {
+    font-size: 28px;
+}
+#fm_quiz_to_main {
+    padding: 5px;
+    width: 7em;
+    background-color: lightseagreen;
+    color: green;
+    border-radius: 3%;
+    text-align: center;
+}
+#fm_quiz_to_main a {
+    font-size: 22px;
+}
+#answer_section {
+    display: none;
+}

@@ -1,0 +1,56 @@
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: monospace, sans-serif;
+    background-image: url("img/b_yoda_bckgrd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+nav {
+    padding: 10px 0 10px 0;
+    font-size: large;
+    font-weight: 900;
+    background-color: gray;
+    position: fixed;
+    top:0%;
+    margin: auto;
+    width: 80%;
+}
+nav div{
+    text-align: center;
+    display:inline;
+    width: 50em;
+    margin: auto;
+    padding: 10px 30px 10px 30px;
+}
+header {
+    margin-top: 50px;
+}
+figcaption {
+    visibility: hidden;
+    padding: 10px 0 10px 0;
+    font-size: 24px;
+    font-weight: 900;
+    color: red;
+}
+#baby_yoda {
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    background-color: red;
+    border-radius: 25%;
+}
+#take_quiz {
+    padding: 5px;
+    width: 7em;
+    background-color: lightseagreen;
+    color: green;
+    border-radius: 3%;
+    text-align: center;
+}
+#take_quiz a {
+    font-size: 22px;
+}

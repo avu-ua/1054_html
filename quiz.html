@@ -4,123 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz about Yoda</title>
-    <style>
-        body {
-            max-width: 80%;
-            margin: auto;
-            font-family: monospace, sans-serif;
-        }
-    </style>
+    <link rel="shortcut icon" href="img/baby-yoda1.png" type="image/x-icon">
+    <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-    <h1>Test Quiz</h1>
-    <div id="question1">
-        <form id="q1_form" onsubmit="submit_q1(event)">
-            <img src="img/e-yoda.png" alt="Yoda" style="width: 150px; height: 150px;">
-            <h3>Whom resembles Yoda?</h3>
-            <img src="img/programmer.png" alt="programmer" style="width: 100px; height: 100px;">
-            <input type="radio" id="programmer1" name="prototype" value="programmer">
-            <label for="programmer1">A programmer George Lucas knew</label>
+    <nav>
+        <div><a href="index.html">Main</a></div>
+        <div style="background-color: darkgray;"><a href="quiz.html">Quiz</a></div>
+        <div><a href="creds.html">Attributes</a></div>
+    </nav>
+    <header>
+        <h1>Quiz - what do you know about Yoda?</h1>
+    </header>
+    <section id="qs_section">
+        <h2>Question <span  id="question_number">1</span> of 4</h2>
+        <form id="q_form" onsubmit="submit_q(event)">
+            <div class="question">
+                <img id="q_img" src="img/e-yoda.png" alt="image">
+                <h1 id="q_phrase">Whom resembles Yoda?</h1>
+            </div>
+            <hr style="height: 2px; background-color: white;">
             <br>
-            <img src="img/einstein.png" alt="Einstein" style="width: 100px; height: 100px;">
-            <input type="radio" id="einstein1" name="prototype" value="einstein">
-            <label for="einstein1">Albert Einstein</label>
+            <section class="options_section">
+                <div class="option">
+                    <img id="opt1_img" src="img/programmer.png" alt="image"><br>
+                    <input id="opt1_inp" type="radio" id="option1" name="response" value=1454>
+                    <label id="opt1_lbl" for="option1">A programmer George Lucas knew</label>
+                </div>
+                <br>
+                <div class="option">
+                    <img id="opt2_img" src="img/einstein.png" alt="image"><br>
+                    <input id="opt2_inp" type="radio" id="option2" name="response" value=3211>
+                    <label id="opt2_lbl" for="option2">Albert Einstein</label>
+                </div>
+                <br>
+                <div class="option">
+                    <img id="opt3_img" src="img/cat.png" alt="image""><br>
+                    <input id="opt3_inp" type="radio" id="option3" name="response" value=2000>
+                    <label id="opt3_lbl" for="option3">George Lucas's cat</label>
+                </div>
+            </section>
             <br>
-            <img src="img/cat.png" alt="cat" style="width: 100px; height: 100px;">
-            <input type="radio" id="cat1" name="prototype" value="cat">
-            <label for="cat1">George Lucas's cat</label>
-            <br><br>
-            <input type="submit" value="Submit">
-          </form>
-    </div>
-    <br>
-    <div id="question2">
-        <form id="q2_form" onsubmit="submit_q2(event)">
-            <img src="img/cat-prog.jpg" alt="Cat-programmer" style="width: 150px; height: 150px;">
-            <h3>Who knows well errors 404, 403, 500 etc.?</h3>
-            <img src="img/programmer.png" alt="programmer" style="width: 100px; height: 100px;">
-            <input type="checkbox" id="programmer2" name="error-knower" value="programmer">
-            <label for="programmer2">A programmer George Lucas knew</label>
-            <br>
-            <img src="img/einstein.png" alt="Einstein" style="width: 100px; height: 100px;">
-            <input type="checkbox" id="einstein2" name="error-knower" value="einstein">
-            <label for="einstein2">Albert Einstein</label>
-            <br>
-            <img src="img/cat.png" alt="cat" style="width: 100px; height: 100px;">
-            <input type="checkbox" id="cat2" name="error-knower" value="cat">
-            <label for="cat2">George Lucas's cat</label>
-            <br><br>
-            <input type="submit" value="Submit">
-          </form>
-    </div>
-    <br>
-    <div>
-        <form id="q3_form" onsubmit="submit_q3(event)">
-            <h3>What the language Yoda spoke sounded like?</h3>
-            <input type="radio" id="chinese" name="language" value="chinese">
-            <label for="chinese">Mandarin spoken by Italian man</label>
-            <br>
-            <input type="radio" id="javascript" name="language" value="javascript">
-            <label for="javascript">JavaScript spoken by a Chinese man</label>
-            <br>
-            <input type="radio" id="sardinian" name="language" value="sardinian">
-            <label for="sardinian">Sardinian accent of Italian</label>
-            <br><br>
-            <input type="submit" value="Submit">
-          </form>
-    </div>
-    <br>
-    <div>
-        <form id="q4_form" onsubmit="submit_q4(event)">
-            <h3>What does expression "Yoda conditions" mean?</h3>
-            <input type="radio" id="longlife" name="conditions" value="longlife">
-            <label for="longlife">Special lifestyle conditions<br>(allowing a person to live a very long life)</label>
-            <br>
-            <input type="radio" id="wisdom" name="conditions" value="wisdom">
-            <label for="wisdom">Special learning conditions<br>(allowing a person to learn a lot and acquire a wisdom)</label>
-            <br>
-            <input type="radio" id="it" name="conditions" value="it">
-            <label for="it">Special programming style<br>(where the two parts of an expression are reversed from the typical order in a conditional statement)</label>
-            <br><br>
-            <input type="submit" value="Submit">
-          </form>
-    </div>
-    <br>
-    <div id="test_div">
-        <p id="test_q1">111</p>
-        <p id="test_q2">222</p>
-        <p id="test_q3">333</p>
-        <p id="test_q4">444</p>
-    </div>
-    <script>
-        function submit_q1(e) {
-            e.preventDefault();
-            var q1_data = new FormData(document.getElementById("q1_form"));
-            var q1_response = q1_data.get("prototype");
-            var x1 = document.getElementById("test_q1");
-            x1.innerHTML = q1_response;
-        }
-        function submit_q2(e) {
-            e.preventDefault();
-            var q2_data = new FormData(document.getElementById("q2_form"));
-            var q2_response = q2_data.getAll("error-knower");
-            var x2 = document.getElementById("test_q2");
-            x2.innerHTML = q2_response;
-        }
-        function submit_q3(e) {
-            e.preventDefault();
-            var q3_data = new FormData(document.getElementById("q3_form"));
-            var q3_response = q3_data.get("language");
-            var x3 = document.getElementById("test_q3");
-            x3.innerHTML = q3_response;
-        }
-        function submit_q4(e) {
-            e.preventDefault();
-            var q4_data = new FormData(document.getElementById("q4_form"));
-            var q4_response = q4_data.get("conditions");
-            var x4 = document.getElementById("test_q4");
-            x4.innerHTML = q4_response;
-        }
-    </script>
+            <input id="submit_btn" type="submit" value="Submit answer">
+            <hr style="height: 5px; background-color: white;">
+        </form>
+    </section>
+    <section id="quiz_end">
+        <div>
+            <p>Congratulations!</p>
+            <p>You have correctly answered to <span id="correct"></span> of 4 questions.</p>
+            <p id="fm_quiz_to_main"><a href="index.html">to Main page</a></p>
+        </div>
+    </section>
+    <section id="answer_section">
+        <div><h4 id="answer_mark">Null</h4></div>
+        <div>
+            <p id="answer_exlpained">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam, laboriosam soluta eius recusandae voluptatem fugit ex qui ea. Doloremque illo tempora ipsa, culpa minus ad unde distinctio sed aliquam.</p>
+            <button id="btn_to_next_q" onclick="next(event)">Next question</button>
+        </div>
+    </section>
+    <script src="quiz.js"></script>
 </body>
 </html>
