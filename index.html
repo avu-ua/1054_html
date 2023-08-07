@@ -5,15 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>May the Force be with You!</title>
-        <link rel="shortcut icon" href="img/baby-yoda1.png" type="image/x-icon">
+        <link rel="shortcut icon" href="img/baby-yoda.png" type="image/x-icon">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
-        <nav>
-            <div style="background-color: darkgray;"><a href="index.html">Main</a></div>
-            <div><a href="quiz.html">Quiz</a></div>
-            <div><a href="creds.html">Attributes</a></div>
+        <nav data-include="partials/nav-panel.partial.html">
         </nav>
         <header>
             <h1>Hello World!</h1>
@@ -21,8 +17,8 @@
         <h2>I am a baby Yoda.</h2>
         <p>Although I am a little creature, I already have a little power.<br>Hover over my small image below to see!</p>
         <figure>
-            <figcaption>MAY THE FORCE BE WITH YOU!</figcaption>
-            <img id="baby_yoda" src="img/baby-yoda1.png" alt="Baby Yoda">
+            <figcaption>MAY THE FORCE<br>BE WITH YOU!</figcaption>
+            <img id="baby_yoda" src="img/baby-yoda.png" alt="Baby Yoda">
         </figure>
         <p>You can also click my image to read more about me.</p>
         <article>
@@ -37,10 +33,10 @@
             <h2>Article 3</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iusto animi dolor culpa quas eos. Laudantium ratione minus natus asperiores velit! Sint similique quidem et quibusdam, explicabo itaque minima culpa.</p>
         </article>
-        <button>Take a Quiz</button>
         <p id="take_quiz"><a href="quiz.html">Take a Quiz</a></p>
         <footer>
             <p style="font-size: 10px;">Created for educational purposes. Sources of images used are at the <a href="creds.html">Attributes</a> page.</p>
         </footer>
+        <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
     </body>
 </html>

@@ -9,22 +9,8 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-nav {
-    padding: 10px 0 10px 0;
-    font-size: large;
-    font-weight: 900;
-    background-color: gray;
-    position: fixed;
-    top:0%;
-    margin: auto;
-    width: 80%;
-}
-nav div{
-    text-align: center;
-    display:inline;
-    width: 50em;
-    margin: auto;
-    padding: 10px 30px 10px 30px;
+#menuitem-quiz {
+    background-color: darkgray;
 }
 header {
     margin-top: 50px;

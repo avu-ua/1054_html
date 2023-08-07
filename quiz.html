@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-    <nav>
-        <div><a href="index.html">Main</a></div>
-        <div style="background-color: darkgray;"><a href="quiz.html">Quiz</a></div>
-        <div><a href="creds.html">Attributes</a></div>
+    <nav data-include="partials/nav-panel.partial.html">
     </nav>
     <header>
         <h1>Quiz - what do you know about Yoda?</h1>
@@ -63,6 +60,7 @@
             <button id="btn_to_next_q" onclick="next(event)">Next question</button>
         </div>
     </section>
+    <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
     <script src="quiz.js"></script>
 </body>
 </html>
